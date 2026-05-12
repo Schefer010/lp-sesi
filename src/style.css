@@ -1,0 +1,52 @@
+:root{
+    --text: #ffff;
+    --bg: #051723;
+    --dblue: #03045E;
+    --mblue: #0077B6;
+    --lblue: #00B4D8;
+    --fblue: #90E0EF;
+    --cyan: #CAF0F8;
+
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 2vh;
+    height: 100px;
+    z-index: 999;
+    animation: decima 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    
+}
+
+nav.sc{
+    background-color: var(--fblue);
+}
+
+@keyframes decima{
+    0%{
+        transform: translateY(-100px);
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+section{
+    min-height: 100vh;
+    height: auto;
+}
+
