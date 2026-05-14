@@ -6,6 +6,7 @@
     --lblue: #00B4D8;
     --rednav: #9d4edd;
     --cyan: #CAF0F8;
+    --lpurple: #cbc5ea;
 
 }
 
@@ -17,7 +18,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content:center;
-    gap: 2vh;
+    gap: 2vw;
     height: 100px;
     z-index: 999;
     animation: decima 1s ease-in-out;
@@ -31,13 +32,13 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: var(--cyan);
+    background-color: var(--lpurple);
     padding: 10px;
     border-radius: 999px;
 }
 
 nav.sc{
-    background-color: var(--rednav);
+    background-color:   #3c1642;
 }
 
 @keyframes decima{
@@ -72,7 +73,7 @@ a{
     transition: all 200ms linear;
 }
 
-a.hover{
+a:hover{
     opacity: 1;
     text-shadow: 0px 3px 10px var(--text);
 }
@@ -83,11 +84,27 @@ section{
 }
 
 #s1{
-    background-image: url(../assets/icons/bgDesktop.jpg);
+    background-image: url('../assets/icons/bgDesktop.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#s2{
+    background-image: url(../assets/icons/bgGarage.avif);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 h1{
@@ -95,7 +112,7 @@ h1{
     word-break: break-word;
     overflow-wrap: break-word;
     text-transform: uppercase;
-    text-shadow: 0px 1px 5px  var(--mblue);
+    text-shadow: 0px 1px 5px  var(--lpurple);
     letter-spacing: 7px;
     width: 100%;
     text-align: center;
@@ -113,13 +130,35 @@ h2{
         animation: direita 2s ease-in-out;
 }
 
+footer.ft{
+    background-color: var(--lpurple);
+}
+
+footer a img{
+    opacity: 0.7;
+    transition: all 200ms linear;
+}
+
+footer a img:hover{
+    opacity: 1;
+    box-shadow: 0px 3px 10px #090909;
+    transform: translateY(-5px) scale(1.1) rotate(360deg);
+}
+
 
 @media (width <= 1000px){
     .navWords{
         display: none;
     }
     #s1{
-        background-image: url(../assets/icons/bgMobile.jpg);
+        background-image: url('../assets/icons/bgMobile.jpg');
+    }
+    h1{
+        line-height: 120px;
+    }
+    h2{
+        margin-top: 10px;
+        font-size: 30px;
     }
 }
 
