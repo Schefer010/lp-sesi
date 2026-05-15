@@ -38,7 +38,7 @@ nav{
 }
 
 nav.sc{
-    background-color:   #3c1642;
+    background-color:   #a557e444;
 }
 
 @keyframes decima{
@@ -96,23 +96,52 @@ section{
 }
 
 #s2{
-    background-image: url(../assets/icons/bgGarage.avif);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #090909;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    flex-wrap: wrap;
+    gap: 50px;
+    min-height: 70vh;
+    
+    
+}
+
+#s3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #adb5bd;
+}
+
+.card{
+    width: 300px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+}
+
+.card.visible{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h1{
-    font-size: 160px;
+    font-size: 120px;
     word-break: break-word;
     overflow-wrap: break-word;
     text-transform: uppercase;
-    text-shadow: 0px 1px 5px  var(--lpurple);
+    text-shadow: 0px 1px 5px  var(--rednav);
     letter-spacing: 7px;
     width: 100%;
     text-align: center;
@@ -126,12 +155,25 @@ h2{
         width: 67%;
         margin-top: -20px;
         text-align: center;
-        text-shadow: 0px 1px 5px var(--mblue);
+        text-shadow: 0px 1px 5px var(--rednav);
         animation: direita 2s ease-in-out;
 }
 
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 60px;
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 1s ease-in-out;
+}
+
 footer.ft{
-    background-color: var(--lpurple);
+    background-color: transparent;
 }
 
 footer a img{
@@ -144,6 +186,16 @@ footer a img:hover{
     box-shadow: 0px 3px 10px #090909;
     transform: translateY(-5px) scale(1.1) rotate(360deg);
 }
+
+
+
+.vid{
+    width: 1000px;
+    height: 520px;
+
+}
+
+
 
 
 @media (width <= 1000px){

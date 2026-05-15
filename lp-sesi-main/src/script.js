@@ -17,3 +17,19 @@ function navTo(id){
         block:'start'
     })
 }
+
+const card = document.querySelectorAll('#s2, .card');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) =>{
+        if(entry.isIntersecting){
+            card.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 500);
+            });
+        }
+    })
+}, {threshold: 0.2})
+
+observer.observe(document.querySelector('#s2'))
